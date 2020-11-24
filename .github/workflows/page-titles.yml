@@ -4,13 +4,17 @@ on:
   workflow_dispatch:
   push:
     branches:
+      - main
       - page-titles
 
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checking out page-titles...
+        uses: actions/checkout@v2
+        with:
+          ref: 'page-titles'
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
