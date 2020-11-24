@@ -1,6 +1,7 @@
 name: ghp for page-titles
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - page-titles
